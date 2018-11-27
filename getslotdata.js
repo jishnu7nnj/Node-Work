@@ -63,17 +63,3 @@ const checkupduration= function(requestBody, storeID, truckType, response, callb
 }
 )
 }
-
-const insertIntoSlots = function(request_id, slot_id, slot_start, slot_end, status){
-
-    const responseQuery= 'INSERT INTO slots (request_id, slot_id, slot_start, slot_end, status) VALUES (?,?,?,?,?)';
-    const responseParams= [request_id, slot_id, slot_start, slot_end, status];
-    cassandraClient.execute(responseQuery, responseParams,{prepare: true}, function(err, result){
-        if(err){
-            console.log("Error inserting data into slots-table");
-        }
-        else{
-            console.log("Data inserted successfully into slots-table");
-        }
-    })
-}
