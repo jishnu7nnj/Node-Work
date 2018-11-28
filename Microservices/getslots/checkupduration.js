@@ -6,6 +6,7 @@ const cassandra= require('cassandra-driver');
 const uuid = require('uuid-random');
 const moment= require('moment');
 var currentDate= new Date();
+const logger= require('C:/Node/Microservices/config/logger.js');
 
 
 app.use(bodyparser.json());
@@ -22,26 +23,40 @@ cassandraClient.connect(function(err){
     console.log('Connection made to the cassandra database. . . ');
 });
 console.log(currentDate);
-
+logger.info(`checkupduration microservice has started`);
 
 var query= 'SELECT * FROM store_data where store_id= ? AND truck_type=?';
 
 app.post('/checkupduration/:storeID/:truckType', function(req, res){
     const Object= [];
     const request_id= uuid();
-    
+    const requestBodyObject= {};
+
     var store_id= req.params.storeID;
     var truck_type= req.params.truckType;
     var params= [store_id, truck_type];
     if (Object.keys(req.body).length === 0) {
-        console.log("Request body recieved is empty");
+        requestBodyObject.app_name= "checkduration";
+        requestBodyObject.message= "Request body recieved is empty";
+        requestBodyObject.body= req.body;
+        logger.error(JSON.stringify(requestBodyObject));
+
         return res.sendStatus(400);
     }else{
     cassandraClient.execute(query, params, {prepare:true}, function(err, result){
         if(err){
-            console.log("Error fetching data from the table");
+            const logObj= {}
+            logObj.app_name= "checkupduration";
+            logObj.message="Error fetching data from the table";
+            logger.error(JSON.stringify(logObj));
         }
         else{
+            const requestObj= {};
+            requestObj.app_name= "checkduration";
+            requestObj.message= "Request recieved from getslotdata microservice";
+            requestObj.body= req.body;
+            logger.info(JSON.stringify(requestObj));
+
              for(let i=0; i<result.rows.length; i++){
                 const slot_id= uuid();
                 const respObject= {};
@@ -69,8 +84,13 @@ app.post('/checkupduration/:storeID/:truckType', function(req, res){
             if(Object.length === 0){
                 res.send("There are no slots available on the requested dates");
             }else{
-            console.log("Response sent to the server.");
-            res.send(Object);
+                const responseObj= {};
+                responseObj.app_name= "checkupduration";
+                responseObj.message= "Response sent to getslotdata microservice"
+                responseObj.body= Object;
+                logger.info(JSON.stringify(responseObj));
+
+                res.send(Object);
         }
     }
     });
@@ -81,12 +101,16 @@ const insertIntoSlots = function(request_id, slot_id, slot_start, slot_end, stat
 
     const responseQuery= 'INSERT INTO slots (request_id, slot_id, slot_start, slot_end, status) VALUES (?,?,?,?,?)';
     const responseParams= [request_id, slot_id, slot_start, slot_end, status];
+
+    logger.info("INSERT INTO slots (request_id, slot_id, slot_start, slot_end, status) VALUES (?,?,?,?,?)");
+    logger.debug(`INSERT query into slots with ${request_id}, ${slot_id}, ${slot_start}, ${slot_end}, ${status}`);
+
     cassandraClient.execute(responseQuery, responseParams,{prepare: true}, function(err, result){
         if(err){
-            console.log("Error inserting data into slots-table");
+            logger.error("Error inserting data into slots-table");
         }
         else{
-            console.log("Data inserted successfully into slots-table");
+            logger.info("Data inserted successfully into slots-table");
         }
     })
 }

@@ -1,0 +1,79 @@
+2018-11-28 18:41:56 info: 	saveslots microservice is started
+2018-11-28 18:42:06 debug: 	SELECT * from slots WHERE slot_id= ?with1a8f39ce-36bf-4f10-b2af-5494fcb024ca
+2018-11-28 18:42:06 info: 	SELECT * from slots WHERE slot_id= ?
+2018-11-28 18:42:06 info: 	{"app_name":"saveslots","message":"Succesfully executed the select query","body":{"request_id":"79bb9bab-088b-441d-9cf1-1dbf88ac8a7a","slot_id":"1a8f39ce-36bf-4f10-b2af-5494fcb024ca","slot_end":"2018-11-29T23:59:59.000Z","slot_start":"2018-11-29T00:00:00.000Z","status":"confirmed"}}
+2018-11-28 18:42:06 info: 	{"app_name":"saveslots","message":"Request sent to updateslots microservice","body":{"request_id":"79bb9bab-088b-441d-9cf1-1dbf88ac8a7a","slot_id":"1a8f39ce-36bf-4f10-b2af-5494fcb024ca","slot_end":"2018-11-29T23:59:59.000Z","slot_start":"2018-11-29T00:00:00.000Z","status":"confirmed"}}
+2018-11-28 18:42:06 info: 	{"app_name":"saveslots","message":"Response recieved from update slots microservice","status":"OK"}
+2018-11-28 18:42:06 info: 	{"app_name":"saveslots","message":"Request sent to deleteslots microservice","request_id":"79bb9bab-088b-441d-9cf1-1dbf88ac8a7a","slot_id":"1a8f39ce-36bf-4f10-b2af-5494fcb024ca"}
+2018-11-28 18:42:06 info: 	{"app_name":"saveslots","message":"Response recieved from deleteslots microservice","status":"OK"}
+2018-11-28 18:43:00 info: 	saveslots microservice is started
+2018-11-28 18:43:17 info: 	saveslots microservice is started
+2018-11-28 18:43:35 info: 	saveslots microservice is started
+2018-11-28 18:43:43 info: 	saveslots microservice is started
+2018-11-28 18:44:18 info: 	updateslots microservice started
+2018-11-28 18:44:18 info: 	saveslots microservice is started
+2018-11-28 18:45:43 info: 	updateslots microservice started
+2018-11-28 18:45:44 info: 	saveslots microservice is started
+2018-11-28 18:45:46 info: 	updateslots microservice started
+2018-11-28 18:45:46 info: 	saveslots microservice is started
+2018-11-28 18:46:56 info: 	updateslots microservice started
+2018-11-28 18:46:56 info: 	saveslots microservice is started
+2018-11-28 18:50:25 info: 	updateslots microservice started
+2018-11-28 18:50:25 info: 	saveslots microservice is started
+2018-11-28 18:50:47 info: 	updateslots microservice started
+2018-11-28 18:50:47 info: 	saveslots microservice is started
+2018-11-28 18:51:53 info: 	updateslots microservice started
+2018-11-28 18:51:54 info: 	saveslots microservice is started
+2018-11-28 18:52:44 info: 	updateslots microservice started
+2018-11-28 18:52:45 info: 	saveslots microservice is started
+2018-11-28 18:55:58 info: 	updateslots microservice started
+2018-11-28 18:55:58 info: 	saveslots microservice is started
+2018-11-28 19:03:10 info: 	updateslots microservice started
+2018-11-28 19:03:11 info: 	saveslots microservice is started
+2018-11-28 19:06:08 info: 	updateslots microservice started
+2018-11-28 19:06:08 info: 	saveslots microservice is started
+2018-11-28 19:06:10 info: 	updateslots microservice started
+2018-11-28 19:06:10 info: 	saveslots microservice is started
+2018-11-28 19:58:39 info: 	updateslots microservice started
+2018-11-28 19:58:39 info: 	saveslots microservice is started
+2018-11-28 19:59:10 info: 	deleteslots microservice has started
+2018-11-28 19:59:10 info: 	updateslots microservice started
+2018-11-28 19:59:11 info: 	saveslots microservice is started
+2018-11-28 20:01:21 info: 	updateslots microservice started
+2018-11-28 20:01:21 info: 	deleteslots microservice has started
+2018-11-28 20:01:22 info: 	saveslots microservice is started
+2018-11-28 20:02:44 info: 	updateslots microservice started
+2018-11-28 20:02:44 info: 	deleteslots microservice has started
+2018-11-28 20:02:44 info: 	saveslots microservice is started
+2018-11-28 20:03:26 info: 	updateslots microservice started
+2018-11-28 20:03:26 info: 	deleteslots microservice has started
+2018-11-28 20:03:26 info: 	saveslots microservice is started
+2018-11-28 20:05:33 info: 	deleteslots microservice has started
+2018-11-28 20:05:33 info: 	updateslots microservice started
+2018-11-28 20:05:33 info: 	saveslots microservice is started
+2018-11-28 20:05:48 info: 	updateslots microservice started
+2018-11-28 20:05:48 info: 	deleteslots microservice has started
+2018-11-28 20:05:49 info: 	saveslots microservice is started
+2018-11-28 20:07:55 info: 	updateslots microservice started
+2018-11-28 20:07:55 info: 	deleteslots microservice has started
+2018-11-28 20:07:55 info: 	saveslots microservice is started
+2018-11-28 20:10:13 info: 	deleteslots microservice has started
+2018-11-28 20:10:13 info: 	updateslots microservice started
+2018-11-28 20:10:13 info: 	saveslots microservice is started
+2018-11-28 20:10:17 debug: 	SELECT * from slots WHERE slot_id= ? with 1a8f39ce-36bf-4f10-b2af-5494fcb024ca
+2018-11-28 20:10:17 info: 	SELECT * from slots WHERE slot_id= ?
+2018-11-28 20:10:17 info: 	{"app_name":"saveslots","message":"Succesfully executed the select query","body":{"request_id":"79bb9bab-088b-441d-9cf1-1dbf88ac8a7a","slot_id":"1a8f39ce-36bf-4f10-b2af-5494fcb024ca","slot_end":"2018-11-29T23:59:59.000Z","slot_start":"2018-11-29T00:00:00.000Z","status":"confirmed"}}
+2018-11-28 20:10:17 info: 	{"app_name":"saveslots","message":"Request sent to updateslots microservice","body":{"request_id":"79bb9bab-088b-441d-9cf1-1dbf88ac8a7a","slot_id":"1a8f39ce-36bf-4f10-b2af-5494fcb024ca","slot_end":"2018-11-29T23:59:59.000Z","slot_start":"2018-11-29T00:00:00.000Z","status":"confirmed"}}
+2018-11-28 20:10:18 info: 	{"app_name":"updateslots","message":"Request has all the required parameters","body":{"request_id":"79bb9bab-088b-441d-9cf1-1dbf88ac8a7a","slot_id":"1a8f39ce-36bf-4f10-b2af-5494fcb024ca","slot_end":"2018-11-29T23:59:59.000Z","slot_start":"2018-11-29T00:00:00.000Z","status":"confirmed"}}
+2018-11-28 20:10:18 info: 	{"app_name":"saveslots","message":"Response recieved from update slots microservice","status":"OK"}
+2018-11-28 20:10:18 info: 	{"app_name":"updateslots","message":"Request recieved from saveslots microservice","request_id":"79bb9bab-088b-441d-9cf1-1dbf88ac8a7a","slot_id":"1a8f39ce-36bf-4f10-b2af-5494fcb024ca","slot_start":"2018-11-29T00:00:00.000Z","slot_end":"2018-11-29T23:59:59.000Z","status":"confirmed"}
+2018-11-28 20:10:18 debug: 	INSERT INTO slots(slot_id, request_id, slot_end, slot_start, status) VALUES (?,?,?,?,?) with 1a8f39ce-36bf-4f10-b2af-5494fcb024ca,79bb9bab-088b-441d-9cf1-1dbf88ac8a7a,2018-11-29T23:59:59.000Z,2018-11-29T00:00:00.000Z,confirmed
+2018-11-28 20:10:18 info: 	INSERT INTO slots(slot_id, request_id, slot_end, slot_start, status) VALUES (?,?,?,?,?)
+2018-11-28 20:10:18 info: 	{"app_name":"saveslots","message":"Request sent to deleteslots microservice","request_id":"79bb9bab-088b-441d-9cf1-1dbf88ac8a7a","slot_id":"1a8f39ce-36bf-4f10-b2af-5494fcb024ca"}
+2018-11-28 20:10:18 info: 	{"app_name":"updateslots","message":"Response sent to saveslots microservice"}
+2018-11-28 20:10:18 info: 	{"app_name":"deleteslots","message":"Request has all the parameters"}
+2018-11-28 20:10:18 info: 	{"app_name":"saveslots","message":"Response recieved from deleteslots microservice","status":"OK"}
+2018-11-28 20:10:18 info: 	{"app_name":"deleteslots","message":"Request to delete slots recieved from saveslots microservice","request_id":"79bb9bab-088b-441d-9cf1-1dbf88ac8a7a","slot_id":"1a8f39ce-36bf-4f10-b2af-5494fcb024ca"}
+2018-11-28 20:10:46 info: 	deleteslots microservice has started
+2018-11-28 20:10:46 info: 	updateslots microservice started
+2018-11-28 20:10:46 info: 	saveslots microservice is started
